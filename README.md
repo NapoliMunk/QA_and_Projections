@@ -14,7 +14,8 @@ import alpaca_trade_api as tradeapi
 from alpaca_trade_api.rest import REST, TimeFrame
 import seaborn as sns
 from MCForecastTools import MCSimulation
-%matplotlib inline```
+%matplotlib inline
+```
 
 #- Set Alpaca API key and secret
     Create the Alpaca API object
