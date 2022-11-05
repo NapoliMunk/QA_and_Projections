@@ -1,7 +1,11 @@
 # Qunataive_and_Projections
 is a team project to demonstrate our collective ability to conduct financial analysis &amp; draw increasingly accurate predictions of major companies we deemed Heavy Hitters or simply Too Big To Fail within our economy and compare there metrics to the S&P 500.
 
-The Great Recession of 2008 taught us no matter what the causation is, certain companies are too big to fail, and the Federal Government along the Federal Reserve, will come to their rescue. In this project, we selected 5 major companies (APPLE INC, MICROSOFT, GOOGLE, AMAZON, META) with the highest market caps and strongest influence in our economy to run a five-year historical return and compare them with the overall performance of the market using the S&P 500 index returns within the same five- year time period. Once we determine their historical performance over the last 5 years, we’ll set the weights and investment capital to project potential future returns using Monte Carlo simulations.
+The Great Recession of 2008 taught us no matter what the causation is certain companies are too big to fail, and the FED & there Reserves, will come to their rescue.
+
+In this project, we selected 5 major companies (APPLE INC, MICROSOFT, GOOGLE, AMAZON, META) with the highest market caps and strongest influence in our economy to run a five-year historical return and compare them with the overall performance of the market using the S&P 500 index returns within the same five- year time period.
+
+Once we determine their historical performance over the last 5 years, we’ll set the weights and investment capital to project potential future returns using Monte Carlo simulations.
 
 We followed the steps below to execute the project:
 
