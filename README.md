@@ -1,4 +1,4 @@
-# Qunataive_and_Projections
+# Quantaive_Analysis_and_Projections
 is a team project to demonstrate our collective ability to conduct financial analysis &amp; draw increasingly accurate predictions of major companies we deemed Heavy Hitters or simply Too Big To Fail within our economy and compare there metrics to the S&P 500.
 
 We selected 5 major companies:
