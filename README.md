@@ -24,7 +24,7 @@ from MCForecastTools import MCSimulation
   Sample results may vary from the solution based on the time frame chosen
 
 # Set the ticker information
-tickers = ["AAPL","MSFT","GOOG","GOOGL","AMZN","META","SPY"]
+```tickers = ["AAPL","MSFT","GOOG","GOOGL","AMZN","META","SPY"]```
 
 # Reorganize the DataFrame
   Separate ticker data
