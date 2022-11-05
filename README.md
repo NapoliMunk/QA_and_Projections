@@ -1,19 +1,12 @@
-# QA_and_Projections
-This is a team project to demonstrate our ability to conduct financial analysis &amp; projections
-
-
-“TOO BIG TO FAIL”
-
-
-“TOO BIG TO FAIL” is a group project conducting a market research and data analysis on certain major companies labeled as to determine risks and potentials using Python and dependencies. 
-The theory behind our investment strategy is there is a low risk investing in “Too big to fail” companies considering they’re the pillar of our economy.
+# Qunataive_and_Projections
+is a team project to demonstrate our collective ability to conduct financial analysis &amp; draw increasingly accurate predictions of major companies we deemed Heavy Hitters or simply Too Big To Fail within our economy and compare there metrics to the S&P 500.
 
 The Great Recession of 2008 taught us no matter what the causation is, certain companies are too big to fail, and the Federal Government along the Federal Reserve, will come to their rescue. In this project, we selected 5 major companies (APPLE INC, MICROSOFT, GOOGLE, AMAZON, META) with the highest market caps and strongest influence in our economy to run a five-year historical return and compare them with the overall performance of the market using the S&P 500 index returns within the same five- year time period. Once we determine their historical performance over the last 5 years, we’ll set the weights and investment capital to project potential future returns using Monte Carlo simulations.
 
 We followed the steps below to execute the project:
 
  #- Import Libraries needed and API from Alpaca 
-import os
+```import os
 import requests
 import pandas as pd
 from dotenv import load_dotenv
@@ -21,7 +14,7 @@ import alpaca_trade_api as tradeapi
 from alpaca_trade_api.rest import REST, TimeFrame
 import seaborn as sns
 from MCForecastTools import MCSimulation
-%matplotlib inline
+%matplotlib inline```
 
 #- Set Alpaca API key and secret
     Create the Alpaca API object
