@@ -106,8 +106,8 @@ variance=hh_portfolio['SPY'].var()
 
 # Computing beta for our tickers
 
-- calculate and visualize the Sharpe & Sortino ratios using a bar plot
-- ``` Sharpe.plot.bar(title='Sharpe Ratios',figsize=(10,7)) ```
+- Calculate and visualize the Sharpe & Sortino ratios using a bar plot
+``` Sharpe.plot.bar(title='Sharpe Ratios',figsize=(10,7)) ```
 
 - Calculate the weighted returns for the Heavy Hitters portfolio assuming an equal number of shares for each stock
 - ```SIM= MCSimulation(
@@ -118,16 +118,16 @@ variance=hh_portfolio['SPY'].var()
 ```
 
 - Calculate the weighted returns for the Heavy Hitters portfolio different number of shares for each stock
-- ```
-- SIM_SPY= MCSimulation(
+
+``` SIM_SPY= MCSimulation(
     portfolio_data= heavy_hitters_df,
     num_simulation = 200,
     weights= [.16,.11,.6,.11,.11,.16,.6,.18,.4],
     num_trading_days = 252 * 30) 
-   ```
+```
 # Plot simulation outcomes
-- ``` line_plot = SIM.plot_simulation()```
--```line_plot_safe = SIM_SPY.plot_simulation()```
+``` line_plot = SIM.plot_simulation()```
+```line_plot_safe = SIM_SPY.plot_simulation()```
 
 # Fetch summary statistics from the Monte Carlo simulation results
 
