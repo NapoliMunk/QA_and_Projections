@@ -2,14 +2,14 @@
 is a team project to demonstrate our collective ability to conduct financial analysis &amp; draw increasingly accurate predictions of major companies we deemed Heavy Hitters or simply Too Big To Fail within our economy and compare there metrics to the S&P 500 & one commodity being gas.
 
 We selected 9 major companies:
-- #APPL
-- #MSFT
-- #T
-- #GOOG/GOOGL
-AMZN
-META
-SPY
-XOM
+- APPL
+- MSFT
+- T
+- GOOG/GOOGL
+- AMZN
+- META
+- SPY
+- XOM
 
 Once we determined their historical performance over the last 5 years, we’ll set the weights and investment capital to project potential future  30 year returns using Monte Carlo simulations in hopes of finding some  insightful tips on how to adjust our strategy.
 
