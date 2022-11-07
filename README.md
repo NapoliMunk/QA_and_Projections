@@ -18,12 +18,19 @@ We followed the steps to execute our analysis and prediction simulation.
  #- Import Libraries needed and API from Alpaca 
 ```import os
 import requests
+from MCForecastTools import MCSimulation
 import pandas as pd
+import hvplot.pandas
 from dotenv import load_dotenv
 import alpaca_trade_api as tradeapi
 from alpaca_trade_api.rest import REST, TimeFrame
+import numpy as np
 import seaborn as sns
-from MCForecastTools import MCSimulation
+import matplotlib.pyplot as plt
+plt.style.use('ggplot')
+import plotly.express as px
+
+
 %matplotlib inline
 ```
 
@@ -41,7 +48,7 @@ start_date = pd.Timestamp('2017-10-31', tz='America/New_York').isoformat()
 end_date = pd.Timestamp('2022-10-31', tz='America/New_York').isoformat()
 ```
 # Set the ticker information
-```tickers = ["AAPL","MSFT","GOOG","GOOGL","AMZN","META","SPY"]```
+```tickers = ["AAPL","MSFT","T","GOOG","GOOGL","AMZN","META","SPY","XOM"]```
 
 # Reorganize the DataFrame
   Separate ticker data
@@ -53,29 +60,53 @@ AAPL=hh_5_year[hh_5_year['symbol']=='AAPL'].drop('symbol',axis=1)  # this is don
 hh_5_year = pd.concat([AAPL, MSFT,T,GOOG,GOOGL,AMZN,META,SPY,XOM],axis=1, keys=['AAPL','MSFT','T','GOOG','GOOGL','AMZN','META','SPY','XOM'])
 ```
 # Create and empty DataFrame for closing prices
-# Fetch the closing prices of AAPL, MSFT, GOOG, GOOGL, AMZN, META, SPY
+# Fetch the closing prices of all tickers
+
+```
+hh_closing_prices["AAPL"] = hh_5_year["AAPL"]["close"] #this is done for each individual ticker
+```
 
 # Calculate Daily Returns
-# Plot the daily returns/# Visualize the distribution of percent change 
-CALCULATE AND PLOT CUMULATIVE RETURNS OF ALL PORTFOLIOS
+```
+hh_portfolio = hh_closing_prices[['AAPL','MSFT','T','GOOG','GOOGL','AMZN','META','SPY','XOM']].pct_change()
+```
+
+# Plot the daily returns & Visualize the distribution of percent change 
+```
+hh_return_plot = hh_portfolio.plot(figsize=(12,8))
+```
 
 # Calculate the standard deviations
-
+```
+hh_std = hh_portfolio.std()
+```
 # Calculate the annualized standard deviation (252 trading days)
-# Calculate and plot the rolling standard deviation Heavy Hitters portfolio using a 100-day window
+```
+annual_std = hh_std * year**(1/2)
+```
 
+# Calculate and plot the rolling standard deviation Heavy Hitters portfolio using a 126-day window
 
-# Calculate and plot the rolling standard deviation Heavy Hitters portfolio using a 100-day window
+```
+hh_portfolio.rolling(window=126).std().plot.line(figsize=(12,8))
+```
 
 # Calculate the correlation
-
-# Calculate covariance of AAPL, MSFT, GOOG, GOOGL, AMZN, META
+```
+Correlation=hh_portfolio.corr().copy()
+```
+# Calculate covariance of tickers
+```
+APPL_cov=hh_portfolio['AAPL'].cov(hh_portfolio['SPY'])
+```
 # Calculate variance of S&P 500
+```
+variance=hh_portfolio['SPY'].var()
+```
 
+# Computing beta for our tickers
 
-# Computing beta for AAPL, MSFT, GOOG, GOOGL, AMZN, META
-
-calculate and visualize the Sharpe ratios using a bar plot
+calculate and visualize the Sharpe & Sortino ratios using a bar plot
 
 Calculate the weighted returns for the Heavy Hitters portfolio assuming an equal number of shares for each stock
 
