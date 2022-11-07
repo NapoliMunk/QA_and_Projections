@@ -126,16 +126,12 @@ variance=hh_portfolio['SPY'].var()
     num_trading_days = 252 * 30) 
    ```
 # Plot simulation outcomes
-- ``` line_plot = SIM.plot_simulation()
-```
--```
-line_plot_safe = SIM_SPY.plot_simulation()
-```
+- ``` line_plot = SIM.plot_simulation()```
+-```line_plot_safe = SIM_SPY.plot_simulation()```
 
 # Fetch summary statistics from the Monte Carlo simulation results
 
-- Calculate the expected portfolio return at the 95% lower and upper confidence intervals based on a $500,000 initial investment.
-
+-Calculate the expected portfolio return at the 95% lower and upper confidence intervals based on a $500,000 initial investment.
 ``` 
 ci_lower = round(sum_stats[8]*500000,9)
 ci_upper = round(sum_stats[9]*500000,9)
