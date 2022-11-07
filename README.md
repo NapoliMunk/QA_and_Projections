@@ -4,13 +4,11 @@ is a team project to demonstrate our collective ability to conduct financial ana
 We selected 5 major companies:
 APPL
 MSFT
-GOOG
+T
 AMZN
 META
 SPY
 XOM
-
-The above tickers share some of the highest market caps within there sectors, they're influence strongest influence in our economy to run a five-year historical return and compare them with the overall performance of the market using the S&P 500 index returns within the same five- year time period.
 
 Once we determine their historical performance over the last 5 years, we’ll set the weights and investment capital to project potential future returns using Monte Carlo simulations.
 
