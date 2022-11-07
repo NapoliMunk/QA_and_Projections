@@ -110,13 +110,13 @@ variance=hh_portfolio['SPY'].var()
 ``` Sharpe.plot.bar(title='Sharpe Ratios',figsize=(10,7)) ```
 
 - Calculate the weighted returns for the Heavy Hitters portfolio assuming an equal number of shares for each stock
-- ```SIM= MCSimulation(
+
+```SIM= MCSimulation(
     portfolio_data= heavy_hitters_df,
     num_simulation = num_sims,
     weights= [.12,.11,.11,.11,.11,.11,.11,.11,.11],
     num_trading_days = 252 * 30)
 ```
-
 - Calculate the weighted returns for the Heavy Hitters portfolio different number of shares for each stock
 
 ``` SIM_SPY= MCSimulation(
