@@ -1,5 +1,5 @@
 # Quantaive_Analysis_and_Projections
-is a team project to demonstrate our collective ability to conduct financial analysis &amp; draw increasingly accurate predictions of major companies we deemed Heavy Hitters or simply Too Big To Fail within our economy and compare there metrics to the S&P 500.
+is a team project to demonstrate our collective ability to conduct financial analysis &amp; draw increasingly accurate predictions of major companies we deemed Heavy Hitters or simply Too Big To Fail within our economy and compare there metrics to the S&P 500 & one commodity being gas.
 
 We selected 5 major companies:
 APPL
@@ -7,13 +7,14 @@ MSFT
 GOOG
 AMZN
 META
-SNAP
+SPY
+XOM
 
-Some of the highest market caps and strongest influence in our economy to run a five-year historical return and compare them with the overall performance of the market using the S&P 500 index returns within the same five- year time period.
+The above tickers share some of the highest market caps within there sectors, they're influence strongest influence in our economy to run a five-year historical return and compare them with the overall performance of the market using the S&P 500 index returns within the same five- year time period.
 
 Once we determine their historical performance over the last 5 years, we’ll set the weights and investment capital to project potential future returns using Monte Carlo simulations.
 
-We followed the steps below to execute the project:
+We followed the steps to execute our analysis and prediction simulation.
 
  #- Import Libraries needed and API from Alpaca 
 ```import os
