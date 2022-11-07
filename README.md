@@ -107,6 +107,7 @@ variance=hh_portfolio['SPY'].var()
 # Computing beta for our tickers
 
 - Calculate and visualize the Sharpe & Sortino ratios using a bar plot
+
 ``` Sharpe.plot.bar(title='Sharpe Ratios',figsize=(10,7)) ```
 
 - Calculate the weighted returns for the Heavy Hitters portfolio assuming an equal number of shares for each stock
